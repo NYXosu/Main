@@ -10,7 +10,7 @@ local URL = URLs[ID]
 
 if URL then
     loadstring(game:HttpGet(URL))()
-    
+    IYload()
 else
     warn("Game Not Supported")
 end
