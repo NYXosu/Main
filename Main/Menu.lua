@@ -10,7 +10,8 @@ local URL = URLs[ID]
 
 if URL then
     loadstring(game:HttpGet(URL))()
-    IYload()
+    --
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NYXosu/Main/refs/heads/main/Main/IY_LOADER"))()
 else
     warn("Game Not Supported")
 end
