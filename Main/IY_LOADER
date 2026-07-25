@@ -1,0 +1,4 @@
+-- IY
+local code = game:HttpGet("https://github.com/NYXosu/Main/blob/main/Main/Important/InfiniteYield_v1.lua")
+local func = loadstring(code)
+--------------------------- </>
