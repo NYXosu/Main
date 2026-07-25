@@ -8,10 +8,19 @@ local URLs = {
 
 local URL = URLs[ID]
 
-if URL then
-    loadstring(game:HttpGet(URL))()
-    --
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/NYXosu/Main/refs/heads/main/Main/IY_LOADER"))()
-else
+if not URL then
     warn("Game Not Supported")
+    return
 end
+
+local ok, err = pcall(function()
+    loadstring(game:HttpGet(URL))()
+end)
+
+if not ok then
+    warn("Failed to load game script:", err)
+end
+
+pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NYXosu/Main/refs/heads/main/Main/IY_LOADER"))()
+end)
