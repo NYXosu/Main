@@ -1,36 +1,7 @@
-local ID = game.PlaceId
-
-local IDs = {
-    [6403373529] = true,
-    [124596094333302] = true,
-    [9015014224] = true,
-    [11520107397] = true,
-    [9431156611] = true,
-    [9426795465] = true,
-    [80420091630966] = true,
-    [13833961666] = true,
-    [129665246576996] = true,
-    [14422118326] = true,
-    [7234087065] = true,
-    [89837553336708] = true,
-    [117232463555132] = true,
-    [74169485398268] = true,
-    [17290438723] = true,
-    [98726100529621] = true,
-    [75803343514634] = true,
-    [132277598079047] = true,
-    [115782629143468] = true,
-    [11828384869] = true,
-    [106620300132058] = true,
-	[9431156611] = true
-}
-
-if ID == 6403373529 or IDs[ID] then
-	
-	if IY_LOADED and not _G.IY_DEBUG then
-	 	error("Infinite Yield v7 is already running!", 0)
-		return
-	end
+if IY_LOADED and not _G.IY_DEBUG then
+	 error("Infinite Yield v7 is already running!", 0)
+	return
+end
 
 pcall(function() getgenv().IY_LOADED = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
@@ -13304,9 +13275,5 @@ task.spawn(function()
     IntroBackground:Destroy()
     minimizeHolder()
 end)
-
-else
-    error("Not Supported Game or Universe")
-end
-
+-- by juansito385
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
